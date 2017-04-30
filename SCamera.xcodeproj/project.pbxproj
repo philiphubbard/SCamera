@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		D324606E1EB6512400D0FA7A /* SCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = D324606C1EB6512400D0FA7A /* SCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D32460751EB6518000D0FA7A /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32460741EB6518000D0FA7A /* Video.swift */; };
+		D32460781EB6519F00D0FA7A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32460771EB6519F00D0FA7A /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D32460691EB6512400D0FA7A /* SCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D324606C1EB6512400D0FA7A /* SCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCamera.h; sourceTree = "<group>"; };
 		D324606D1EB6512400D0FA7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D32460741EB6518000D0FA7A /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		D32460771EB6519F00D0FA7A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +25,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D32460781EB6519F00D0FA7A /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +37,7 @@
 			children = (
 				D324606B1EB6512400D0FA7A /* SCamera */,
 				D324606A1EB6512400D0FA7A /* Products */,
+				D32460761EB6519F00D0FA7A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -46,10 +52,19 @@
 		D324606B1EB6512400D0FA7A /* SCamera */ = {
 			isa = PBXGroup;
 			children = (
+				D32460741EB6518000D0FA7A /* Video.swift */,
 				D324606C1EB6512400D0FA7A /* SCamera.h */,
 				D324606D1EB6512400D0FA7A /* Info.plist */,
 			);
 			path = SCamera;
+			sourceTree = "<group>";
+		};
+		D32460761EB6519F00D0FA7A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D32460771EB6519F00D0FA7A /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +111,7 @@
 					D32460681EB6512400D0FA7A = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = EBH83Y995B;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -132,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D32460751EB6518000D0FA7A /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +259,7 @@
 		D32460721EB6512400D0FA7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = EBH83Y995B;
@@ -255,6 +273,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.philiphubbard.SCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -262,6 +281,7 @@
 		D32460731EB6512400D0FA7A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = EBH83Y995B;
