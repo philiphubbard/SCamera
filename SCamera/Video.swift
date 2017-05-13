@@ -91,6 +91,9 @@ public class Video: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
         delegate.droppedFrame(sampleBuffer: sampleBuffer)
     }
     
+    // A type method to build a CGImage from a CMSampleBuffer, a typical step in the captureOutput
+    // method of the VideoDelegate.
+    
     public class func cgImage(fromSampleBuffer sampleBuffer: CMSampleBuffer!) -> CGImage? {
         guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
             print("CMSampleBufferGetImageBuffer() failed")
